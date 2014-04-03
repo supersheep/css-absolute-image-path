@@ -1,6 +1,6 @@
 {
   "name": "css-absolute-image-path",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/supersheep/css-absolute-image-path",
   "devDependencies": {
-    "mocha": "^1.18.2"
+    "mocha": "^1.18.2",
+    "should": "^3.2.0",
+    "assert": "^1.1.1"
   },
   "dependencies": {
-    "should": "^3.2.0",
-    "assert": "^1.1.1",
     "MD5": "^1.2.0"
   }
 }
