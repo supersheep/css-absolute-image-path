@@ -1,0 +1,27 @@
+{
+  "name": "css-absolute-image-path",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/supersheep/css-absolute-image-path.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supersheep/css-absolute-image-path/issues"
+  },
+  "homepage": "https://github.com/supersheep/css-absolute-image-path",
+  "devDependencies": {
+    "mocha": "^1.18.2"
+  },
+  "dependencies": {
+    "should": "^3.2.0",
+    "assert": "^1.1.1",
+    "MD5": "^1.2.0"
+  }
+}
