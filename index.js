@@ -209,7 +209,9 @@ CssParser.prototype = {
             , url_parsed
             , opt = this.opt;
 
-
+        if(!imgpath){
+            throw new Error("Empty imgpath in " + csspath);
+        }
         url_parsed = mod_url.parse(imgpath);
         hash = url_parsed.hash;
         if(url_parsed.protocol && !url_parsed.protocol.match(/^http/)){
