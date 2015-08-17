@@ -24,6 +24,9 @@ function CssParser(opt) {
     this.opt = opt;
     this.cwd = opt.cwd;
     this.hosts = opt.hosts.map(function(h){
+        if(h.indexOf("//") !== -1){
+            h = h.split("//")[1];
+        }
         return (opt.protocal ? (opt.protocal + "://") : "//"  ) + h;
     });
     this.opt.src = mod_path.resolve(opt.root_dir);
@@ -222,7 +225,11 @@ CssParser.prototype = {
             host = url_parsed.host;
         }else{
             cssroot = mod_path.dirname(csspath);
-            fullpath = mod_path.join(cssroot,url_parsed.pathname);
+            try{
+                fullpath = mod_path.join(cssroot,url_parsed.pathname);
+            }catch(e){
+                throw err
+            }
         }
 
         var ext = mod_path.extname(fullpath);
